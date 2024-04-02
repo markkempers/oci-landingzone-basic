@@ -1,5 +1,5 @@
 #Create Wordpress serfer
-resource "oci_core_instance" "wordpres" {
+resource "oci_core_instance" "wordpress" {
   availability_domain = data.oci_identity_availability_domains.domains.availability_domains[0]["name"]
   compartment_id = oci_identity_compartment.wordpress.id
   shape = var.compute_shape
