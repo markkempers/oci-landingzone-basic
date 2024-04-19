@@ -33,3 +33,8 @@ variable "mem" {
 variable "sshkey" {
   default = "sshkey"
 }
+
+# Networking variables
+variable "sec_incoming_cidr" {
+  default = "0.0.0.0/0"
+}
