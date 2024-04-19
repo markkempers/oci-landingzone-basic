@@ -5,4 +5,5 @@ resource "oci_core_subnet" "inet" {
   vcn_id = oci_core_vcn.default.id
   display_name = "Subnet with Internet Access"
   route_table_id = oci_core_route_table.igw.id
+  security_list_ids = oci_core_security_list.seclist.id
 }
