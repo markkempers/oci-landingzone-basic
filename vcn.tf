@@ -22,5 +22,5 @@ resource "oci_core_route_table" "igw" {
     destination       = "0.0.0.0/0"
     destination_type  = "CIDR_BLOCK"
   }
-  display_name = "Internet Gateway RT"
+  display_name = "Routingtable for Wordpress Demo"
 }
