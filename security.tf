@@ -30,6 +30,10 @@ resource "oci_core_security_list" "seclist" {
       max = local.https_port_number
     }
   }
+  egress_security_rules {
+    protocol = local.all_protocols
+    destination = "0.0.0.0/0"
+  }
 }
 
 locals {
