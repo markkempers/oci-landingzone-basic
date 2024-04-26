@@ -30,6 +30,15 @@ resource "oci_core_security_list" "seclist" {
       max = local.https_port_number
     }
   }
+  ingress_security_rules {
+    protocol = local.tcp_protocol_number
+    source = "10.10.10.0/24"
+    description = "Permit local SSH connections"
+    tcp_options {
+      min = local.ssh_port_number
+      max = local.ssh_port_number
+    }
+  }
   egress_security_rules {
     protocol = local.all_protocols
     destination = "0.0.0.0/0"
