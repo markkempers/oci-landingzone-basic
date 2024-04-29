@@ -18,6 +18,7 @@ resource "oci_core_instance" "wordpress" {
   }
   metadata = {
     ssh_authorized_keys = var.sshkey
+    user_data = "${base64encode(file("./ansibleuser.sh"))}"
   }
   display_name = "Wordpress server"
 }
