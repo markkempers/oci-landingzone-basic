@@ -67,8 +67,8 @@ resource "oci_core_instance" "ansible" {
     display_name = "default VNIC"
   }
   shape_config {
-    ocpus = var.ocpu_db
-    memory_in_gbs = var.mem_db
+    ocpus = var.ocpu
+    memory_in_gbs = var.mem
   }
   metadata = {
     ssh_authorized_keys = var.sshkey
