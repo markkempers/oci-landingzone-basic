@@ -32,7 +32,7 @@ resource "oci_core_security_list" "seclist" {
   }
   ingress_security_rules {
     protocol = local.tcp_protocol_number
-    source = var.local_subnet
+    source = var.inet_subnet
     description = "Permit local SSH connections"
     tcp_options {
       min = local.ssh_port_number
@@ -41,7 +41,7 @@ resource "oci_core_security_list" "seclist" {
   }
   ingress_security_rules {
     protocol = local.tcp_protocol_number
-    source = var.local_subnet
+    source = var.inet_subnet
     description = "Permit local MYSQL connections"
     tcp_options {
       min = local.mysql_port_number
