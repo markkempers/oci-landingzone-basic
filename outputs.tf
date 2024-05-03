@@ -9,7 +9,7 @@ output "private_ip_wordpress" {
   value = oci_core_instance.wordpress[*].private_ip
 }
 
-output "private_ip_database" {
+output "public_ip_database" {
   description = "All public IPs from  Wordpress machine"
   value = oci_core_instance.database[*].public_ip
 }
@@ -19,7 +19,7 @@ output "private_ip_database" {
   value = oci_core_instance.database[*].private_ip
 }
 
-output "private_ip_ansible" {
+output "public_ip_ansible" {
   description = "All public IPs from  Wordpress machine"
   value = oci_core_instance.ansible[*].public_ip
 }
