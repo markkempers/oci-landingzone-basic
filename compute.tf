@@ -24,7 +24,7 @@ resource "oci_core_instance" "wordpress" {
   display_name = "Wordpress server"
 }
 
-#Create Wordpress serfer
+#Create Database server
 resource "oci_core_instance" "database" {
   count = var.dbserver ? 1 : 0
   availability_domain = data.oci_identity_availability_domains.domains.availability_domains[0]["name"]
@@ -63,9 +63,8 @@ resource "oci_core_instance" "ansible" {
     boot_volume_size_in_gbs = "100"
   }
   create_vnic_details {
-    subnet_id = oci_core_subnet.wordpress.id
+    subnet_id = oci_core_subnet.inet.id
     display_name = "default VNIC"
-    assign_public_ip = false
   }
   shape_config {
     ocpus = var.ocpu_db
