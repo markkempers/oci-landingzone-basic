@@ -10,6 +10,20 @@ variable "tenancy_ocid" {
 
 #Compute variables
 
+variable "webserver" {
+  type = bool
+  default = true
+}
+
+variable "dbserver" {
+  type = bool
+  default = false
+}
+
+variable "ansibleserver" {
+  type = bool
+  default = false
+}
 variable "os" {
   default = " Ubuntu"
 }

@@ -1,3 +1,5 @@
+ansibleserver = true
+
 compute_shape = "VM.Standard.E2.1.Micro"
 ocpu = "1"
 mem = "1"
