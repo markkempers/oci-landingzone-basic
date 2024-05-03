@@ -33,8 +33,15 @@ variable "mem" {
 variable "sshkey" {
   default = "sshkey"
 }
+variable "sshkey_ansible" {
+  default = "sshkey"
+}
 
 # Networking variables
 variable "sec_incoming_cidr" {
   default = "0.0.0.0/0"
+}
+
+variable "inet_subnet" {
+  default = "10.10.10.0/24"
 }
