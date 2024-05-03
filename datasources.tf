@@ -20,3 +20,16 @@ data "oci_core_services" "sgw" {
   }
   count = 1
 }
+
+# Create cloud-init data for ansible user
+data "cloudinit_config" "ansible" {
+  gzip = true
+  base64_encode = true
+  part {
+    content_type = "text/x-shellscript"
+    content = templatefile("ansibleuser.tftpl", {
+      sshkey_ansible = var.sshkey_ansible
+    })
+    filename = "ansibleuser.tftpl"
+  }
+}
