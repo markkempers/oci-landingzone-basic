@@ -7,7 +7,7 @@ resource "oci_core_instance" "wordpress" {
   source_details {
     source_id = data.oci_core_images.ubuntu.images[0]["id"]
     source_type = "image"
-    boot_volume_size_in_gbs = "100"
+    boot_volume_size_in_gbs = "60"
   }
   create_vnic_details {
     subnet_id = oci_core_subnet.inet.id
@@ -33,7 +33,7 @@ resource "oci_core_instance" "database" {
   source_details {
     source_id = data.oci_core_images.ubuntu.images[0]["id"]
     source_type = "image"
-    boot_volume_size_in_gbs = "100"
+    boot_volume_size_in_gbs = "60"
   }
   create_vnic_details {
     subnet_id = oci_core_subnet.inet.id
@@ -60,7 +60,7 @@ resource "oci_core_instance" "ansible" {
   source_details {
     source_id = data.oci_core_images.ubuntu.images[0]["id"]
     source_type = "image"
-    boot_volume_size_in_gbs = "100"
+    boot_volume_size_in_gbs = "60"
   }
   create_vnic_details {
     subnet_id = oci_core_subnet.inet.id
