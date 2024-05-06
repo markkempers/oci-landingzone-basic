@@ -14,3 +14,4 @@ sshkey_ansible = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5jLzVGbRg+JLXn5/vhok0ZW
 
 sec_incoming_cidr = "95.99.22.233/32"
 inet_subnet = "10.10.10.0/24"
+ansible_ip = "141.148.233.230/32"

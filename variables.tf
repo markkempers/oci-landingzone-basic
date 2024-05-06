@@ -59,3 +59,7 @@ variable "sec_incoming_cidr" {
 variable "inet_subnet" {
   default = "10.10.10.0/24"
 }
+
+variable "ansible_ip" {
+  default = "0.0.0.0/0"
+}

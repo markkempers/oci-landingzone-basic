@@ -41,6 +41,15 @@ resource "oci_core_security_list" "seclist" {
   }
   ingress_security_rules {
     protocol = local.tcp_protocol_number
+    source = var.ansible_ip
+    description = "Permit SSH connection from external Ansible Server"
+    tcp_options {
+      min = local.ssh_port_number
+      max = local.ssh_port_number
+    }
+  }
+  ingress_security_rules {
+    protocol = local.tcp_protocol_number
     source = var.inet_subnet
     description = "Permit local MYSQL connections"
     tcp_options {
