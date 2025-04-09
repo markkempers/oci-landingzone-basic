@@ -1,8 +1,8 @@
-## OCI Landingzone for student
+## OCI BAsic Landingzone
 
-This Terraform package is used for demo teaching purposes.
+This Terraform package is used for demo and examplary purposes
 
-This terraform package canbe uploaded to the OCI Resource Manager (ORM) and deployed.
+This terraform package can be uploaded to the OCI Resource Manager (ORM) and deployed.
 This includes:
 
 - Create a Compartment under root called wordpress-demo
