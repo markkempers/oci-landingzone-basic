@@ -1,4 +1,4 @@
-## OCI BAsic Landingzone
+## OCI Basic Landingzone
 
 This Terraform package is used for demo and examplary purposes
 
